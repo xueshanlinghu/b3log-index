@@ -1,0 +1,27 @@
+extends layout/layout.pug
+
+block head
+    - var title = "赞助 - "
+    include layout/head.pug
+
+block content
+    div(style="position: relative;overflow: hidden;")
+        img(style="position: absolute" src="https://b3log.org/siyuan/static/img-bg4.svg")
+        - var headerClass = "header--black header"
+        include layout/header.pug
+        div(class="feature__hr")
+        div(class="feature__hr")
+        div(class="wrapper" style="max-width: 620px;position: relative;z-index: 1;text-align: center")
+            h2(class="feature__title feature__black") 赞助
+            div(class="feature__hr")
+            p(class="feature__desc") 如果思源对您有所帮助，欢迎通过以下方式赞助，支持项目持续开发和维护。
+        div(class="feature__hr")
+        div(class="download wrapper")
+            div(class="item")
+                img(src="https://b3log.org/siyuan/static/logo-hacpai.svg" alt="链滴")
+                h3 链滴
+                span 中国大陆
+                a(class="download__link" href="https://ld246.com/sponsor" target="_blank" rel="nofollow") 赞助
+        div(class="feature__hr")
+        div(class="feature__hr")
+        include layout/footer.pug

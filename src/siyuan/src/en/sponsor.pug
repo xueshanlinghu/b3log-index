@@ -1,0 +1,27 @@
+extends ../layout/layout.pug
+
+block head
+    - var title = "Sponsor - "
+    include ../layout/head-en.pug
+
+block content
+    div(style="position: relative;overflow: hidden;")
+        img(style="position: absolute" src="https://b3log.org/siyuan/static/img-bg4.svg")
+        - var headerClass = "header header--black"
+        include ../layout/header-en.pug
+        div(class="feature__hr")
+        div(class="feature__hr")
+        div(class="wrapper" style="max-width: 620px;position: relative;z-index: 1;text-align: center")
+            h2(class="feature__title feature__black") Sponsor SiYuan
+            div(class="feature__hr")
+            p(class="feature__desc") If SiYuan helps you, consider sponsoring its ongoing development and maintenance.
+        div(class="feature__hr")
+        div(class="download wrapper")
+            div(class="item")
+                img(src="https://b3log.org/siyuan/static/logo-hacpai.svg" alt="LiuYun")
+                h3 LiuYun
+                span International
+                a(class="download__link" href="https://liuyun.io/sponsor" target="_blank" rel="nofollow") Sponsor
+        div(class="feature__hr")
+        div(class="feature__hr")
+        include ../layout/footer-en.pug
