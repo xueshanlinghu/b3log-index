@@ -12,4 +12,4 @@ header(class=headerClass)
         a(class="header__a" href="pricing.html") 定价
         a(class="header__a" href="community.html") 社区
         a(class="header__a" target="_blank" href="https://siyuan-cn.b3log.org") 指南
-        a(class="header__a" href="en/?lang=en") English
+        a(class="header__a" href=(typeof languageHref === "undefined" ? "en/?lang=en" : languageHref)) English
