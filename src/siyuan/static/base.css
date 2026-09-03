@@ -819,13 +819,29 @@ kbd {
 }
 
 .pricing__card--pro {
-    background: linear-gradient(180deg, #f4f7ff 0%, #fff 48%);
-    border-color: #aebdf8;
+    --pricing-accent: #238636;
+    --pricing-accent-fill: #65b84d;
+    --pricing-accent-soft: #e6f4ea;
+    --pricing-accent-border: #8bcf9f;
+    --pricing-card-background: #f2fbf5;
+    --pricing-button-background: #238636;
+    --pricing-button-text: #fff;
 }
 
 .pricing__card--subscription {
-    background: linear-gradient(180deg, #f2fbf5 0%, #fff 48%);
-    border-color: #8bcf9f;
+    --pricing-accent: #9a6700;
+    --pricing-accent-fill: #f5b84f;
+    --pricing-accent-soft: #fff1c2;
+    --pricing-accent-border: #e3b341;
+    --pricing-card-background: #fffaf0;
+    --pricing-button-background: #f5b84f;
+    --pricing-button-text: #24292e;
+}
+
+.pricing__card--pro,
+.pricing__card--subscription {
+    background: linear-gradient(180deg, var(--pricing-card-background) 0%, #fff 48%);
+    border-color: var(--pricing-accent-border);
 }
 
 .pricing__card-title {
@@ -847,6 +863,7 @@ kbd {
 }
 
 .pricing__plan-icon {
+    color: var(--pricing-accent-fill);
     display: block;
     flex: 0 0 32px;
     height: 32px;
@@ -855,19 +872,14 @@ kbd {
 }
 
 .pricing__badge {
-    background: #e9edff;
+    background: var(--pricing-accent-soft);
     border-radius: 999px;
-    color: #4969ed;
+    color: var(--pricing-accent);
     flex-shrink: 0;
     font-size: 12px;
     font-weight: 700;
     line-height: 20px;
     padding: 2px 10px;
-}
-
-.pricing__card--subscription .pricing__badge {
-    background: #e6f4ea;
-    color: #238636;
 }
 
 .pricing__storage-summary {
@@ -888,13 +900,24 @@ kbd {
 }
 
 .pricing__storage-summary--self-hosted {
-    background: #fff4e5;
-    color: #9a6700;
+    background: var(--pricing-accent-soft);
+    color: var(--pricing-accent);
 }
 
 .pricing__storage-summary--official {
-    background: #eaf7ee;
-    color: #238636;
+    background: var(--pricing-accent-soft);
+    color: var(--pricing-accent);
+}
+
+.pricing__card--pro .pricing__card-title h3,
+.pricing__card--pro .pricing__amount,
+.pricing__card--pro .pricing__note,
+.pricing__card--pro .pricing__note .link,
+.pricing__card--subscription .pricing__card-title h3,
+.pricing__card--subscription .pricing__amount,
+.pricing__card--subscription .pricing__note,
+.pricing__card--subscription .pricing__note .link {
+    color: var(--pricing-accent);
 }
 
 .pricing__price {
@@ -964,13 +987,13 @@ kbd {
 }
 
 .pricing__card--pro .pricing__button {
-    background: #c0c0c0;
-    color: #24292e;
+    background: var(--pricing-button-background);
+    color: var(--pricing-button-text);
 }
 
 .pricing__card--subscription .pricing__button {
-    background: #f5b84f;
-    color: #24292e;
+    background: var(--pricing-button-background);
+    color: var(--pricing-button-text);
 }
 
 .pricing__button--outline {
@@ -1015,6 +1038,16 @@ kbd {
     font-weight: 600;
     line-height: 18px;
     margin-top: 2px;
+}
+
+.pricing__card--pro .pricing__feature-note,
+.pricing__card--pro .pricing__feature-note .link {
+    color: var(--pricing-accent);
+}
+
+.pricing__card--pro .pricing__features,
+.pricing__card--subscription .pricing__features {
+    border-top-color: var(--pricing-accent-border);
 }
 
 @media (prefers-reduced-motion: reduce) {
