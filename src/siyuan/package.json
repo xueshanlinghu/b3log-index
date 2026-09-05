@@ -1,6 +1,7 @@
 {
   "name": "siyuan",
   "version": "1.0.0",
+  "packageManager": "pnpm@11.22.0",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development"
